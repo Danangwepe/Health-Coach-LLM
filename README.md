@@ -1,7 +1,9 @@
 <div align="center">
 
 <br/>
-AI Health & Habit Coach
+<h1 style="font-size: 42px; font-family: 'Instrument Serif', serif; color: #6366F1; text-align: center; margin: 20px 0;">
+    AI Health & Habit Coach
+</h1>
 <br/>
 
 **AI-Powered Personal Health Coaching System with Deterministic Pattern Analysis & LLM Interpretation**
