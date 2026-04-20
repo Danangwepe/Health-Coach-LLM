@@ -1,9 +1,7 @@
 <div align="center">
 
 <br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Instrument+Serif&size=42&pause=1000&color=6366F1&center=true&vCenter=true&width=750&lines=🌿+AI+Health+%26+Habit+Coach;Your+Personal+AI+Wellness+Partner" alt="Typing SVG" />
-
+AI Health & Habit Coach
 <br/>
 
 **AI-Powered Personal Health Coaching System with Deterministic Pattern Analysis & LLM Interpretation**
@@ -240,7 +238,7 @@ This project was built to demonstrate practical skills in:
 
 <div align="center">
   <br/>
-  <sub>Built by <a href="https://github.com/danangwepe">danangwepe</a> · <a href="https://linkedin.com/in/YOUR_PROFILE">LinkedIn</a></sub>
+  <sub>Built by <a href="https://github.com/danangwepe">danangwepe</a> · <a href="https://linkedin.com/in/danang-wahyu-prasektiyo">LinkedIn</a></sub>
   <br/><br/>
   <sub>Powered by Groq · LangChain · Supabase · React · FastAPI</sub>
 </div>
