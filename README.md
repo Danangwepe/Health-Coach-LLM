@@ -12,7 +12,6 @@
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-6366f1?style=for-the-badge&labelColor=1e1e2e)](https://your-app.vercel.app)
 [![Python](https://img.shields.io/badge/Python-3.10+-3b82f6?style=for-the-badge&logo=python&logoColor=white&labelColor=1e1e2e)](https://python.org)
 [![React](https://img.shields.io/badge/React-18-06b6d4?style=for-the-badge&logo=react&logoColor=white&labelColor=1e1e2e)](https://react.dev)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Backend-10b981?style=for-the-badge&logo=fastapi&logoColor=white&labelColor=1e1e2e)](https://fastapi.tiangolo.com)
@@ -27,25 +26,16 @@
 ## 📸 Application Interface
 
 <p align="center">
-  <img src="assets/dashboard-preview.png" alt="Dashboard Preview" width="100%" />
+  <img src="assets/dashboard_preview.png" alt="Dashboard Preview" width="100%" />
 </p>
 
 <p align="center">
-  <img src="assets/chat-preview.png" alt="Chat Interface" width="48%" />
+  <img src="assets/chat_preview.png" alt="Chat Interface" width="48%" />
   &nbsp;
-  <img src="assets/log-preview.png" alt="Daily Log Form" width="48%" />
+  <img src="assets/log_preview.png" alt="Daily Log Form" width="48%" />
 </p>
 
 *Main system interface showing the health dashboard with radar analysis, alongside the AI chat coach and daily log form.*
-
----
-
-## 🔗 Live Demo
-
-You can access the live application here:
-**[AI Health Coach — Live App](https://your-app.vercel.app)**
-
-> **Note:** Optimized for **Desktop display**. For the best experience, use a desktop browser.
 
 ---
 
@@ -73,7 +63,7 @@ The pipeline enforces a strict **computation-first, interpretation-second** flow
 
 ```mermaid
 graph TD
-    A[User Daily Log] --> B[Supabase - PostgreSQL]
+    A[User Daily Log] --> B[Supabase]
     B --> C[Pattern Analyzer - Pure Python]
     C -->|Averages · Trends · Scores| D[Deterministic Health Engine]
     D -->|Structured Analysis Result| E[LangChain Context Builder]
@@ -156,12 +146,11 @@ graph TD
 |---|---|---|
 | 🧠 LLM | Groq API · Llama 3.3-70B | Coaching language generation |
 | 🔗 Orchestration | LangChain | Message history & prompt management |
-| 🗄️ Database | Supabase (PostgreSQL) | Logs, chat history, user profiles |
+| 🗄️ Database | Supabase | Logs, chat history, user profiles |
 | ⚙️ Backend | FastAPI + Uvicorn | REST API & business logic |
 | ⚛️ Frontend | React 18 + Vite | UI, routing, state management |
 | 📊 Charts | Recharts | Interactive data visualizations |
 | 🎨 Styling | Tailwind CSS | Clean, minimal design system |
-| ☁️ Deploy | Vercel + Railway | Frontend + Backend hosting |
 
 **Total infrastructure cost: $0/month** — 100% free tiers.
 
@@ -229,16 +218,6 @@ Open **http://localhost:5173** ✅
 
 ---
 
-## 🌐 Deployment
-
-| Service | Platform | Free Tier |
-|---|---|---|
-| Frontend | [Vercel](https://vercel.com) | Unlimited hobby projects |
-| Backend | [Railway](https://railway.app) | $5/month free credits |
-| Database | [Supabase](https://supabase.com) | 500MB · 2 projects |
-
----
-
 ## ⚠️ Scope & Limitations
 
 - Designed for **personal use and portfolio demonstration**
@@ -259,15 +238,9 @@ This project was built to demonstrate practical skills in:
 
 ---
 
-## 📄 License
-
-MIT License — free to fork, modify, and build upon.
-
----
-
 <div align="center">
   <br/>
-  <sub>Built by <a href="https://github.com/YOUR_USERNAME">Your Name</a> · <a href="https://linkedin.com/in/YOUR_PROFILE">LinkedIn</a> · <a href="https://your-app.vercel.app">Live Demo</a></sub>
+  <sub>Built by <a href="https://github.com/danangwepe">danangwepe</a> · <a href="https://linkedin.com/in/YOUR_PROFILE">LinkedIn</a></sub>
   <br/><br/>
   <sub>Powered by Groq · LangChain · Supabase · React · FastAPI</sub>
 </div>
