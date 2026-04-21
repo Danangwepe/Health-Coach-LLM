@@ -26,15 +26,15 @@
 ## 📸 Application Interface
 
 <p align="center">
-  <img src="assets/homepage.png" alt="Dashboard Preview" width="100%" />
+  <img src="assets/homepage.png" alt="Dashboard Preview" width="48%" />
+    &nbsp;
+    <img src="assets/logpage.png" alt="Chat Interface" width="48%" />
 </p>
 
-<p align="center">
-  <img src="assets/logpage.png" alt="Chat Interface" width="33%" />
+<p align="center"> 
+  <img src="assets/dashboardpage.png" alt="Daily Log Form" width="48%" />
   &nbsp;
-  <img src="assets/dashboardpage.png" alt="Daily Log Form" width="33%" />
-  &nbsp;
-  <img src="assets/chatpage.png" alt="Daily Log Form" width="33%" />
+  <img src="assets/chatpage.png" alt="Daily Log Form" width="48%" />
 </p>
 
 *Main system interface showing the health dashboard with radar analysis, alongside the AI chat coach and daily log form.*
