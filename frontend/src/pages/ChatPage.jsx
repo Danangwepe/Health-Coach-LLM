@@ -101,10 +101,10 @@ export default function ChatPage({ userId }) {
   }
 
   return (
-    <div className="flex flex-col h-screen max-w-2xl mx-auto px-6">
+    <div className="flex flex-col h-[calc(100vh-3.5rem)] max-w-2xl mx-auto px-4 sm:px-6">
       {/* Header */}
-      <div className="py-8 mb-2 shrink-0">
-        <h1 className="text-3xl">Chat Coach</h1>
+      <div className="py-7 mb-2 shrink-0">
+        <h1 className="text-2xl font-semibold tracking-tight">Chat Coach</h1>
         <p className="text-sm text-gray-400 mt-1">
           Tanya apa saja — jawaban berdasarkan data kesehatanmu
         </p>
@@ -112,7 +112,7 @@ export default function ChatPage({ userId }) {
 
       {/* Quick prompts */}
       {messages.length <= 1 && (
-        <div className="grid grid-cols-2 gap-2 mb-6 shrink-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6 shrink-0">
           {QUICK.map(q => (
             <button
               key={q}

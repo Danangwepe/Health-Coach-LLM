@@ -12,11 +12,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3 {
-    font-family: "Instrument Serif", Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-  }
 }
 
 @layer components {

@@ -3,68 +3,71 @@ import { ClipboardList, LayoutDashboard, Leaf, MessageCircle } from "lucide-reac
 import { NavLink, Route, Routes } from "react-router-dom"
 import ChatPage from "./pages/ChatPage"
 import DashboardPage from "./pages/DashboardPage"
+import HomePage from "./pages/HomePage"
 import LogPage from "./pages/LogPage"
 
 const USER_ID = "demo_user_001"
 
 const nav = [
-  { to: "/",          label: "Log Harian",  icon: ClipboardList  },
+  { to: "/log",       label: "Log Harian",  icon: ClipboardList   },
   { to: "/dashboard", label: "Dashboard",   icon: LayoutDashboard },
   { to: "/chat",      label: "Chat Coach",  icon: MessageCircle   },
 ]
 
-export default function App() {
+function NavBar() {
   return (
-    <div className="min-h-screen flex">
-      {/* ── Sidebar ─────────────────────────────── */}
-      <aside className="w-56 shrink-0 bg-white border-r border-surface-border
-                        flex flex-col py-8 px-4 fixed inset-y-0 left-0 z-20">
-        {/* Logo */}
-        <div className="flex items-center gap-2.5 px-2 mb-10">
-          <div className="w-8 h-8 rounded-xl bg-brand-500 flex items-center
-                          justify-center text-white">
-            <Leaf size={15} />
+    <header className="sticky top-0 z-20 bg-white/95 backdrop-blur-sm border-b border-surface-border">
+      <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+        <NavLink
+          to="/"
+          className="flex items-center gap-2.5 text-gray-900 hover:text-gray-700 transition-colors"
+        >
+          <div className="w-7 h-7 rounded-lg bg-brand-500 flex items-center justify-center text-white">
+            <Leaf size={13} />
           </div>
-          <span className="font-serif text-lg leading-none">Health Coach</span>
-        </div>
+          <span className="text-sm font-semibold tracking-tight">Health Coach</span>
+        </NavLink>
 
-        {/* Nav links */}
-        <nav className="flex flex-col gap-1">
+        <nav className="flex items-center gap-0.5">
           {nav.map(({ to, label, icon: Icon }) => (
             <NavLink
               key={to}
               to={to}
-              end={to === "/"}
               className={({ isActive }) =>
                 clsx(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm transition-all",
+                  "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[13px] transition-all",
                   isActive
                     ? "bg-brand-50 text-brand-600 font-medium"
-                    : "text-gray-500 hover:bg-surface-muted hover:text-gray-800"
+                    : "text-gray-500 hover:text-gray-800 hover:bg-surface-muted"
                 )
               }
             >
-              <Icon size={16} />
-              {label}
+              <Icon size={14} />
+              <span className="hidden sm:inline">{label}</span>
             </NavLink>
           ))}
         </nav>
+      </div>
+    </header>
+  )
+}
 
-        {/* Footer */}
-        <div className="mt-auto px-2">
-          <p className="text-xs text-gray-400">AI Health Coach v2.0</p>
-          <p className="text-xs text-gray-400">Groq · LangChain · Supabase</p>
-        </div>
-      </aside>
-
-      {/* ── Main content ─────────────────────────── */}
-      <main className="flex-1 ml-56 min-h-screen">
-        <Routes>
-          <Route path="/"          element={<LogPage      userId={USER_ID} />} />
-          <Route path="/dashboard" element={<DashboardPage userId={USER_ID} />} />
-          <Route path="/chat"      element={<ChatPage     userId={USER_ID} />} />
-        </Routes>
-      </main>
+function InnerLayout({ children }) {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <NavBar />
+      <main className="flex-1">{children}</main>
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/"          element={<HomePage />} />
+      <Route path="/log"       element={<InnerLayout><LogPage      userId={USER_ID} /></InnerLayout>} />
+      <Route path="/dashboard" element={<InnerLayout><DashboardPage userId={USER_ID} /></InnerLayout>} />
+      <Route path="/chat"      element={<InnerLayout><ChatPage     userId={USER_ID} /></InnerLayout>} />
+    </Routes>
   )
 }

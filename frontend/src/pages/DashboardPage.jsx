@@ -59,14 +59,14 @@ export default function DashboardPage({ userId }) {
   }
 
   if (loading) return (
-    <div className="flex items-center justify-center h-screen text-gray-400 text-sm">
+    <div className="flex items-center justify-center py-40 text-gray-400 text-sm">
       Memuat data...
     </div>
   )
 
   if (!data) return (
     <div className="max-w-lg mx-auto px-6 py-24 text-center">
-      <p className="text-2xl font-serif mb-2">Belum ada data</p>
+      <p className="text-2xl font-semibold mb-2">Belum ada data</p>
       <p className="text-sm text-gray-500">Isi log harian terlebih dahulu agar dashboard aktif.</p>
     </div>
   )
@@ -91,28 +91,28 @@ export default function DashboardPage({ userId }) {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
+    <div className="max-w-4xl mx-auto px-5 sm:px-6 py-8 sm:py-12">
       {/* Header */}
-      <div className="mb-10">
-        <p className="text-sm text-gray-400 mb-1">{data.days_analyzed} hari terakhir</p>
-        <h1 className="text-3xl">Dashboard Kesehatan</h1>
+      <div className="mb-6 sm:mb-10">
+        <p className="text-xs text-gray-400 mb-1.5 uppercase tracking-wider font-medium">{data.days_analyzed} hari terakhir</p>
+        <h1 className="text-2xl font-semibold tracking-tight">Dashboard Kesehatan</h1>
       </div>
 
       {/* Score cards */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="card px-5 py-5 col-span-1 flex flex-col justify-center items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div className="card px-5 py-5 sm:col-span-1 flex flex-col justify-center items-center">
           <p className="text-xs text-gray-400 mb-1">Skor Kesehatan</p>
           <p className="text-5xl font-serif text-indigo-600">{data.overall_health_score}</p>
           <p className="text-xs text-gray-400 mt-1">/ 100</p>
         </div>
-        <div className="col-span-2 grid grid-cols-2 gap-4">
+        <div className="sm:col-span-2 grid grid-cols-2 gap-4">
           {Object.entries(data.scores).map(([k, score]) => (
             <div key={k} className="card px-4 py-4">
               <div className="flex items-center justify-between mb-1">
                 <span className="text-xs text-gray-500">{LABEL[k]}</span>
                 <TrendBadge trend={data.trends[k]} />
               </div>
-              <p className="text-2xl font-serif">{score}<span className="text-sm text-gray-400">/100</span></p>
+              <p className="text-2xl font-semibold">{score}<span className="text-sm font-normal text-gray-400">/100</span></p>
               <div className="mt-2 h-1 bg-gray-100 rounded-full overflow-hidden">
                 <div
                   className="h-full rounded-full bg-indigo-500 transition-all"
@@ -125,7 +125,7 @@ export default function DashboardPage({ userId }) {
       </div>
 
       {/* Charts row 1 */}
-      <div className="grid grid-cols-2 gap-4 mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <div className="card px-5 py-5">
           <p className="text-sm font-medium mb-4">Radar Kesehatan</p>
           <ResponsiveContainer width="100%" height={220}>

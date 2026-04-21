@@ -26,13 +26,15 @@
 ## 📸 Application Interface
 
 <p align="center">
-  <img src="assets/dashboard_preview.png" alt="Dashboard Preview" width="100%" />
+  <img src="assets/homepage.png" alt="Dashboard Preview" width="100%" />
 </p>
 
 <p align="center">
-  <img src="assets/chat_preview.png" alt="Chat Interface" width="48%" />
+  <img src="assets/logpage.png" alt="Chat Interface" width="33%" />
   &nbsp;
-  <img src="assets/log_preview.png" alt="Daily Log Form" width="48%" />
+  <img src="assets/dashboardpage.png" alt="Daily Log Form" width="33%" />
+  &nbsp;
+  <img src="assets/chatpage.png" alt="Daily Log Form" width="33%" />
 </p>
 
 *Main system interface showing the health dashboard with radar analysis, alongside the AI chat coach and daily log form.*
@@ -150,7 +152,7 @@ graph TD
 | ⚙️ Backend | FastAPI + Uvicorn | REST API & business logic |
 | ⚛️ Frontend | React 18 + Vite | UI, routing, state management |
 | 📊 Charts | Recharts | Interactive data visualizations |
-| 🎨 Styling | Tailwind CSS | Clean, minimal design system |
+| 🎨 Styling | Tailwind CSS | Responsive, minimal design system |
 
 **Total infrastructure cost: $0/month** — 100% free tiers.
 
@@ -175,9 +177,10 @@ health-coach-ai/
 │
 └── frontend/                       ← React + Vite + Tailwind
     └── src/
-        ├── App.jsx                 ← Sidebar layout + routing
+        ├── App.jsx                 ← Top nav layout + routing
         ├── lib/api.js              ← Axios API client
         └── pages/
+            ├── HomePage.jsx        ← Landing page with feature overview
             ├── LogPage.jsx         ← Daily habit logging form
             ├── DashboardPage.jsx   ← Charts + AI weekly report
             └── ChatPage.jsx        ← Interactive AI chat

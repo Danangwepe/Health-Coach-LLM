@@ -64,11 +64,11 @@ export default function LogPage({ userId }) {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-6 py-12">
+    <div className="max-w-2xl mx-auto px-5 sm:px-6 py-8 sm:py-12">
       {/* Header */}
       <div className="mb-10">
-        <p className="text-sm text-gray-400 mb-1">{today}</p>
-        <h1 className="text-3xl">Log Kebiasaan Harian</h1>
+        <p className="text-xs text-gray-400 mb-1.5 uppercase tracking-wider font-medium">{today}</p>
+        <h1 className="text-2xl font-semibold tracking-tight">Log Kebiasaan Harian</h1>
         <p className="text-sm text-gray-500 mt-1.5">
           Isi setiap hari agar AI Coach bisa memberi rekomendasi yang akurat.
         </p>
